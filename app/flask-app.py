@@ -23,7 +23,7 @@ tasks = [
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return "Hola, World!"
 
 # INICIO codigo comentado 1
 '''
