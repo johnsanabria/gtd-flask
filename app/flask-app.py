@@ -26,6 +26,9 @@ def index():
     return "Hola, World!"
 
 # INICIO codigo comentado 1
+# Se habilita un endpoint para devolver todas las tareas almacenadas en la 
+# variables 'tasks'
+#
 '''
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
@@ -34,6 +37,8 @@ def get_tasks():
 # FIN - codigo comentado 1
 
 # INICIO - codigo comentado 2
+# Permite recuperar una tarea dado un 'task_id'
+#
 '''
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['GET'])
 def get_task(task_id):
@@ -45,6 +50,8 @@ def get_task(task_id):
 # FIN - codigo comentado 2
 
 # INICIO - codigo comentado 3
+# Una forma de personalizar los errores arrojados por la aplicacion
+#
 '''
 @app.errorhandler(404)
 def not_found(error):
@@ -53,6 +60,9 @@ def not_found(error):
 # FIN - codigo comentado 3
 
 # INICIO - codigo comentado 4
+# Endpoint que permite la creacion de una nueva tarea a traves de la linea de
+# comandos.
+#
 '''
 @app.route('/todo/api/v1.0/tasks', methods=['POST'])
 def create_task():
@@ -70,6 +80,9 @@ def create_task():
 # FIN - codigo comentado 4
 
 # INICIO - codigo comentado 5
+# Las siguientes lineas de codigo contienen las instrucciones para modificar 
+# los datos de una tarea y de borrar una tarea dado un 'task_id'
+#
 '''
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
